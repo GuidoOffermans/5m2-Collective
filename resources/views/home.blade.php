@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Laravel</title>
+@section('content')
+    <div class="flex flex-col text-center place-content-center">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <div class="self-center my-6"></div>
 
+        <article class="prose self-center">
+            <h1>Home</h2>
+                <p>
+                   Home text
+                </p>
+        </article>
 
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body class="antialiased">
-<div class="">
-    @include('layouts.nav')
-    Home
-</div>
-</body>
-</html>
+        <x-heart-icon class="self-center my-6"/>
+
+    </div>
+@endsection

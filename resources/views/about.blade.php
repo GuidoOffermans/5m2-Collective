@@ -1,18 +1,52 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>about</title>
+@section('content')
+    <div class="flex flex-col text-center place-content-center">
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body class="antialiased">
-<div class="">
-    @include('layouts.nav')
-    About
-</div>
-</body>
-</html>
+        <div class="self-center my-6"></div>
+
+        <article class="prose self-center">
+            <h1>About</h2>
+            <p>
+                As a reaction to the current global crises, 5m2 forms an
+                accessible, collective workspace and wandering
+                studio for creative people with different cultural backgrounds and precarious life circumstances.
+            </p>
+        </article>
+
+        <x-heart-icon class="self-center my-6"/>
+
+        <article class="prose self-center">
+            <h2>Our Vision</h2>
+            <p>
+                As a reaction to the current global crises, 5m2 forms an
+                accessible, collective workspace and wandering
+                studio for creative people with different cultural backgrounds and precarious life circumstances.
+                creative
+                people with different cultural backgrounds and precarious life circumstances. creative people with
+                different
+                cultural backgrounds and precarious life circumstances. creative people with different cultural
+                backgrounds
+                and
+                precarious life circumstances. creative people with different cultural backgrounds and precarious life
+                circumstances.
+            </p>
+        </article>
+
+        <x-heart-icon class="self-center my-6"/>
+
+        <article class="prose self-center">
+            <h2>Our History</h2>
+            <p>
+                As a reaction to the current global crises, 5m2 forms an
+                accessible, collective workspace and wandering
+                studio for
+            </p>
+        </article>
+
+        <x-heart-icon class="self-center my-6"/>
+
+        <div class="self-center my-6"></div>
+
+    </div>
+@endsection

@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-    <title>Kontakt</title>
+@section('content')
+    <section class="flex flex-col  text-center place-content-center">
 
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-</head>
-<body class="antialiased">
-<div class="">
-    @include('layouts.nav')
-    Kontakt
-</div>
-</body>
-</html>
+        <div class="self-center my-6"></div>
+
+        <article class="prose self-center">
+            <h1>Kontakt</h1>
+            <p>Email: 5m2collective@gmail.com</p>
+        </article>
+
+        <x-heart-icon class="self-center my-6"/>
+
+    </section>
+@endsection
