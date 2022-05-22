@@ -17,26 +17,6 @@
         <x-heart-icon class="self-center my-6"/>
     </section>
 
-    @php
-        $ateliers = [
-			(object)[
-				'name' => 'Atelier Binz 39',
-				'street' => 'Dienerstrasse 40',
-				'postalcode' => '8004 Zürich',
-				],
-				(object)[
-				'name' => 'Atelier x',
-				'street' => 'Xstrasse 20',
-				'postalcode' => '8013 Zürich',
-				],
-				(object)[
-				'name' => 'Atelier y 19',
-				'street' => 'Ystrasse 40',
-				'postalcode' => '8009 Zürich',
-				]
-];
-    @endphp
-
     <section class="flex max-w-7xl mx-auto sm:px-6 lg:px-8 h-96">
 
         <div class="bg-white overflow-y-auto scroll-smooth sm:rounded-md w-1/3 border-y border-gray-200">
@@ -48,8 +28,8 @@
                             <div class="flex flex-col justify-center">
                                 <p class="text-sm font-medium text-gray-900">Atelier</p>
                                 <h3 class="font-medium text-gray-900">{{$atelier->name}}</h3>
-                                <p class="text-sm text-gray-500">{{$atelier->street}}</p>
-                                <p class="text-sm text-gray-500">{{$atelier->postalcode}}</p>
+                                <p class="text-sm text-gray-500">{{$atelier->address}}</p>
+                                <p class="text-sm text-gray-500">{{$atelier->postalCode}} {{$atelier->city}}</p>
                             </div>
                             <div class="mb-4 flex-shrink-0 sm:mb-0 sm:mr-4 ml-auto">
                                 <img

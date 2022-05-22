@@ -4,21 +4,21 @@
     <section>
         <div class="md:flex md:items-center md:justify-between border-b my-4">
             <div class="flex-1 min-w-0">
-                <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Ateliers Spaces</h2>
+                <h2 class="text-2xl font-bold leading-7 text-gray-900 sm:text-3xl sm:truncate">Collective</h2>
             </div>
         </div>
 
         <div class="pr-8 mt-8">
             <div class="sm:flex sm:items-center">
                 <div class="sm:flex-auto">
-                    <h1 class="text-xl font-semibold text-gray-900">Ateliers</h1>
-                    <p class="mt-2 text-sm text-gray-700">A list of all the ateliers.</p>
+                    <h1 class="text-xl font-semibold text-gray-900">Collective</h1>
+                    <p class="mt-2 text-sm text-gray-700">A list of everyone in the collective.</p>
                 </div>
                 <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
                     <a href="/admin/ateliers/add">
                         <button type="button"
                                 class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
-                            Add atelier
+                            Add person
                         </button>
                     </a>
                 </div>
@@ -46,6 +46,10 @@
                                 </tr>
                                 </thead>
                                 <tbody class="divide-y divide-gray-200 bg-white">
+
+                                @php
+                                    $ateliers = [];
+                                @endphp
 
                                 @foreach ($ateliers as $atelier)
                                     <tr>

@@ -8,7 +8,9 @@
             </div>
         </div>
 
-        <form class="space-y-8 divide-y divide-gray-200">
+        <form class="space-y-8 divide-y divide-gray-200" method="POST" action="/admin/ateliers/create">
+            @method('POST')
+            @csrf
             <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
                 <div>
                     <div>
@@ -24,30 +26,20 @@
                                        class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                                     Atelier name </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="atelier-name" id="atelier-name" autocomplete="atelier-name"
+                                    <input type="text" name="atelierName" id="atelierName" autocomplete="atelierName"
                                            class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
 
                             <div
                                 class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                                    About </label>
+                                <label for="address"
+                                       class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    Address
+                                </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                <textarea id="about" name="about" rows="3"
-                                          class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"></textarea>
-                                    <p class="mt-2 text-sm text-gray-500">Write a few sentences about the atelier.</p>
-                                </div>
-                            </div>
-
-                            <div
-                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="street-address"
-                                       class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2"> Street
-                                    address </label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="street-address" id="street-address"
-                                           autocomplete="street-address"
+                                    <input type="text" name="address" id="address"
+                                           autocomplete="address"
                                            class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
@@ -62,24 +54,24 @@
                                 </div>
                             </div>
 
-                            <div
-                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="region" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
-                                    State
-                                    / Province </label>
-                                <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="region" id="region" autocomplete="address-level1"
-                                           class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
-                                </div>
-                            </div>
+                            {{--                            <div--}}
+                            {{--                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">--}}
+                            {{--                                <label for="region" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">--}}
+                            {{--                                    State--}}
+                            {{--                                    / Province </label>--}}
+                            {{--                                <div class="mt-1 sm:mt-0 sm:col-span-2">--}}
+                            {{--                                    <input type="text" name="region" id="region" autocomplete="address-level1"--}}
+                            {{--                                           class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">--}}
+                            {{--                                </div>--}}
+                            {{--                            </div>--}}
 
                             <div
                                 class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
-                                <label for="postal-code"
+                                <label for="postalCode"
                                        class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
                                     ZIP / Postal code </label>
                                 <div class="mt-1 sm:mt-0 sm:col-span-2">
-                                    <input type="text" name="postal-code" id="postal-code" autocomplete="postal-code"
+                                    <input type="text" name="postalCode" id="postalCode" autocomplete="postalCode"
                                            class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                                 </div>
                             </div>
@@ -112,6 +104,17 @@
                                             <p class="text-xs text-gray-500">PNG, JPG, GIF up to 10MB</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start sm:border-t sm:border-gray-200 sm:pt-5">
+                                <label for="about" class="block text-sm font-medium text-gray-700 sm:mt-px sm:pt-2">
+                                    About </label>
+                                <div class="mt-1 sm:mt-0 sm:col-span-2">
+                                <textarea id="about" name="about" rows="3"
+                                          class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border border-gray-300 rounded-md"></textarea>
+                                    <p class="mt-2 text-sm text-gray-500">Write a few sentences about the atelier.</p>
                                 </div>
                             </div>
                         </div>
