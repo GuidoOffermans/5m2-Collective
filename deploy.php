@@ -15,9 +15,8 @@ add( 'writable_dirs', [] );
 // Hosts
 
 host( '194.13.82.194' )
-//    ->setRemoteUser( 'atheros' )
-    ->set('remote_user', 'atheros')
-    ->setDeployPath( '~/apps/5m2-Collective' );
+    ->set( 'remote_user', 'atheros' )
+    ->set( 'deploy_path', '~/apps/5m2-Collective' );
 
 // Tasks
 
