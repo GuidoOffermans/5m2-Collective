@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb48c4edc821e0229f483ec2a68ac5f4",
+    "content-hash": "09ce552051793df04300709a3e31c3dd",
     "packages": [
         {
             "name": "brick/math",
@@ -68,16 +68,16 @@
         },
         {
             "name": "deployer/deployer",
-            "version": "v7.0.0-rc.8",
+            "version": "v7.0.0-rc.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "629973ee3d0ce78953b18500cba0695feec28c2b"
+                "reference": "22aec36a96ed449ccebb430aeda449b2cebf87a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/629973ee3d0ce78953b18500cba0695feec28c2b",
-                "reference": "629973ee3d0ce78953b18500cba0695feec28c2b",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/22aec36a96ed449ccebb430aeda449b2cebf87a9",
+                "reference": "22aec36a96ed449ccebb430aeda449b2cebf87a9",
                 "shasum": ""
             },
             "bin": [
@@ -107,7 +107,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-22T14:33:06+00:00"
+            "time": "2022-03-18T22:53:10+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
