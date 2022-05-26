@@ -13,6 +13,7 @@ host( '194.13.82.194' )
     ->setRemoteUser( 'atheros' )
     ->setDeployPath( '~/apps/5m2-Collective' );
 
+
 task( 'build', function () {
     cd( '{{release_path}}' );
     run( 'npm run build' );
