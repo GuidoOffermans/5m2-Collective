@@ -12,7 +12,8 @@ add( 'shared_files', [] );
 add( 'shared_dirs', [] );
 add( 'writable_dirs', [] );
 
-// Hosts
+// hello
+
 
 host( '194.13.82.194' )
     ->set( 'remote_user', 'atheros' )
