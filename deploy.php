@@ -2,6 +2,7 @@
 
 namespace Deployer;
 
+require 'recipe/common.php';
 require 'recipe/laravel.php';
 
 set( 'repository', 'https://github.com/GuidoOffermans/5m2-Collective.git' );
