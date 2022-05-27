@@ -2,26 +2,17 @@ name: deploy
 
 on:
   push:
-    branches: [ main ]
-
-concurrency: production_environment
+    branches:
+      - main
 
 jobs:
-  deploy:
-    runs-on: ubuntu-20.04
-
+  create-deployment-artifacts:
+    name: Create deployment artifacts
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          ref: main
 
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.1'
-
-      - name: Deploy
-        uses: deployphp/action@v1
-        with:
-          private-key: ${{ secrets.PRIVATE_KEY }}
-          dep: deploy
+      - name: compile CSS and JS
+        run: |
+          yarn install
+          yarn dev
