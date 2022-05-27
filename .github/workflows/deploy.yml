@@ -142,7 +142,7 @@ jobs:
             ln -s -f ${BASE_PATH}/.env $RELEASE_PATH
             ln -s -f $STORAGE_PATH $RELEASE_PATH
             ln -s -n -f $RELEASE_PATH $ACTIVE_RELEASE_PATH
-            systemctl reload php8.1-fpm
+#            systemctl reload php8.1-fpm
 
   run-after-hooks:
     name: "${{ matrix.server.name }}: After hook"
