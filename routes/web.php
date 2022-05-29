@@ -8,10 +8,12 @@ use Illuminate\Support\Facades\Route;
 Route::get( '/', fn() => view( 'home' ) )->name( 'home' );
 Route::get( 'about', fn() => view( 'about' ) )->name( 'about' );
 Route::get( 'atelier-spaces', [ AtelierController::class, 'index' ] )->name( 'atelier-spaces' );
+Route::get( 'atelier-spaces/share-your-atelier', fn() => view( 'share-your-atelier' ) )->name( 'share-your-atelier' );
+Route::get( 'atelier-spaces/atelier/{atelier}', [ AtelierController::class, 'show' ] )->name( 'atelier' );
 Route::get( 'stammtisch', fn() => view( 'stammtisch' ) )->name( 'stammtisch' );
-Route::get( 'events', fn() => view( 'events' ) )->name( 'events' );
+Route::get( 'projects', fn() => view( 'projects' ) )->name( 'projects' );
 Route::get( 'collective', fn() => view( 'collective' ) )->name( 'collective' );
-Route::get( 'kontakt', fn() => view( 'kontakt' ) )->name( 'kontakt' );
+Route::get( 'contact', fn() => view( 'contact' ) )->name( 'contact' );
 
 Route::middleware( [ 'auth' ] )
     ->prefix( 'admin' )

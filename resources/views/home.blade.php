@@ -1,18 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="flex flex-col text-center place-content-center">
+    <section
+        class="flex flex-col text-center place-content-center items-center w-5/6 mx-auto
+        bg-[url('/images/heart.svg')] bg-contain bg-no-repeat bg-top">
 
-        <div class="self-center my-6"></div>
+        <div class="my-6"></div>
 
-        <article class="prose self-center">
-            <h1>Home</h2>
-                <p>
-                   Home text
-                </p>
+        <article class="prose prose-md lg:prose-3xl">
+            <h1>
+                5m2 is a collective of creatives in Zurich. Our goal is to connect people with a strong foothold in
+                the creative scene with one’s, who don’t. We want to create access to places, infrastructures and
+                projects that otherwise stay hidden for some members of the community due to structural injustices.
+                The people within this collective shape and move the structure, creating a space to grow and learn
+                from shared knowledge and experiences.
+            </h1>
+
         </article>
 
-        <x-heart-icon class="self-center my-6"/>
+        <div class="my-12"></div>
 
-    </div>
+    </section>
 @endsection

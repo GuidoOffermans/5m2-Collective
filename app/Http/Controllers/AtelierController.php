@@ -14,4 +14,14 @@ class AtelierController extends Controller {
     public function index(): View {
         return view( 'atelier-spaces', [ 'ateliers' => Atelier::all() ] );
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param \App\Models\Atelier $atelier
+     * @return \Illuminate\Http\Response
+     */
+    public function show( Atelier $atelier ): view {
+        return view( 'atelier', [ 'atelier' => $atelier ] );
+    }
 }
