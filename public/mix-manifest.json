@@ -1,4 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/fonts/HelveticaNeue-Light.woff2": "/fonts/HelveticaNeue-Light.woff2",
+    "/fonts/Ogg-Bold.woff2": "/fonts/Ogg-Bold.woff2",
+    "/fonts/Ogg-BoldItalic.woff2": "/fonts/Ogg-BoldItalic.woff2"
 }

@@ -23,7 +23,7 @@
         <div class=" mx-auto">
             <div class="flex justify-between border-y border-gray-400 h-16">
                 <div class="flex mx-auto">
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8 font-Ogg font-bold">
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                             {{ __('Home') }}
                         </x-nav-link>
