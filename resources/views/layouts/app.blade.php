@@ -19,7 +19,7 @@
         <x-application-logo/>
     </div>
 
-    <nav class="bg-white">
+    <nav class="bg-white tracking-wider">
         <div class=" mx-auto">
             <div class="flex justify-between border-y border-gray-400 h-16">
                 <div class="flex mx-auto">
@@ -27,8 +27,11 @@
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                             {{ __('Home') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('atelier-spaces')" :active="request()->routeIs('atelier-spaces')">
-                            {{ __('Atelier Spaces') }}
+                        <x-nav-link :href="route('find-a-studio')" :active="request()->routeIs('find-a-studio')">
+                            {{ __('Find a Studio') }}
+                        </x-nav-link>
+                        <x-nav-link :href="route('share-a-studio')" :active="request()->routeIs('share-a-studio')">
+                            {{ __('Share a Studio') }}
                         </x-nav-link>
                         <x-nav-link :href="route('stammtisch')" :active="request()->routeIs('stammtisch')">
                             {{ __('Stammtisch') }}
@@ -86,8 +89,11 @@
                 <x-mobile-nav-link :href="route('home')" :active="request()->routeIs('home')">
                     {{ __('Home') }}
                 </x-mobile-nav-link>
-                <x-mobile-nav-link :href="route('atelier-spaces')" :active="request()->routeIs('atelier-spaces')">
-                    {{ __('Atelier Spaces') }}
+                <x-mobile-nav-link :href="route('find-a-studio')" :active="request()->routeIs('find-a-studio')">
+                    {{ __('Find a Studio') }}
+                </x-mobile-nav-link>
+                <x-mobile-nav-link :href="route('share-a-studio')" :active="request()->routeIs('share-a-studio')">
+                    {{ __('Share a Studio') }}
                 </x-mobile-nav-link>
                 <x-mobile-nav-link :href="route('stammtisch')" :active="request()->routeIs('stammtisch')">
                     {{ __('Stammtisch') }}
@@ -114,7 +120,7 @@
     @yield('content')
 </main>
 
-<footer class="flex flex-col justify-center justify-items-center items-center border-t border-gray-300">
+<footer class="flex flex-col justify-center justify-items-center items-center border-t border-gray-300 tracking-wider">
     <div class="flex w-3/4 my-6">
         <nav class="flex flex-row text-xl w-1/3 justify-between">
             <div class="flex flex-col space-y-2">
@@ -124,8 +130,11 @@
                 <a href="{{route('about')}}">
                     {{ __('About') }}
                 </a>
-                <a href="{{route('atelier-spaces')}}">
-                    {{ __('Atelier spaces') }}
+                <a href="{{route('find-a-studio')}}">
+                    {{ __('Find a Studio') }}
+                </a>
+                <a href="{{route('share-a-studio')}}">
+                    {{ __('Share a Studio') }}
                 </a>
                 <a href="{{route('stammtisch')}}">
                     {{ __('Stammtisch') }}

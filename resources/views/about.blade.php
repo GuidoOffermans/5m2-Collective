@@ -6,8 +6,8 @@
         <div class="self-center my-6"></div>
 
         <article class="prose prose-md lg:prose-xl">
-            <h1>About</h1>
-            <p>
+            <h1 class="font-Ogg font-bold">About</h1>
+            <p class="font-Helvetica font-light leading-6">
                 Finding space for creative freedom can be challenging. But once acquired, it opens up almost infinite
                 possibilities. Most of these spaces draw in like-minded people, generating otherwise hard-to-come-by
                 access to projects, places and options. For some, finding access to those places comes easier than for
@@ -22,8 +22,8 @@
         <x-heart-icon class="my-6"/>
 
         <article class="prose prose-md lg:prose-xl ">
-            <h2>Our Vision</h2>
-            <ul class="list-inside">
+            <h2 class="font-Ogg font-bold">Our Vision</h2>
+            <ul class="list-inside font-Helvetica font-light leading-6">
                 <li>Create a collective support structure for and of creative people</li>
                 <li>Negotiate and democratize access to art and design spaces and projects</li>
             </ul>
@@ -33,8 +33,8 @@
         <x-heart-icon class="my-6"/>
 
         <article class="prose prose-md lg:prose-xl">
-            <h2>Our Approach</h2>
-            <ul class="list-inside">
+            <h2 class="font-Ogg font-bold">Our Approach</h2>
+            <ul class="list-inside font-Helvetica font-light leading-6">
                 <li>Build bridges between existing networks</li>
                 <li>Collect unused spaces on the platform and make them accessible</li>
                 <li>Facilitate possibilities to work on projects as a collective</li>
@@ -45,15 +45,14 @@
         <x-heart-icon class="my-6"/>
 
         <article class="prose prose-md lg:prose-xl">
-            <h2>Our History</h2>
-            <p>
+            <h2 class="font-Ogg font-bold">Our History</h2>
+            <p class="font-Helvetica font-light leading-6">
                 This collective originated out of an urge to react to the current global humanitarian crises in an
                 active and designedly way. After an extensive research period, the concept of using our standing and
                 access within the creative scene and open it up, just made sense. As a result, we created a structure
                 and a platform that generates low threshold use of space, that is otherwise left unused.
-
             </p>
-            <p>
+            <p class="font-Helvetica font-light leading-6">
                 The collective’s name derives from a statement by the city of Zurich, stating that every person should
                 have access to five square meters of free space. Generally, this refers to parks and public facilities.
                 For us, it opened up a discussion around what free space can stand for and who effectively has access or
@@ -66,9 +65,9 @@
         <div class="my-72"></div>
 
         <article class="prose prose-md lg:prose-xl">
-            <h2>Credits</h2>
-            <p>
-                <b>Concept and design:</b> 5m2 Collective<br>
+            <h2 class="font-Ogg font-bold">Credits</h2>
+            <p class="font-Helvetica font-light leading-6">
+                <b class="bold">Concept and design:</b> 5m2 Collective<br>
                 <b>Logo and initial visual identity:</b> Lucy Fabian & Nicole Hirschi<br>
                 <b>Typefaces:</b> Ogg by Sharp Type<br>
                 <b>Website design:</b> Nicole Hirschi<br>

@@ -12,16 +12,26 @@ class AtelierController extends Controller {
      * @return View
      */
     public function index(): View {
-        return view( 'atelier-spaces', [ 'ateliers' => Atelier::all() ] );
+        return view( 'find-a-studio', [ 'ateliers' => Atelier::all() ] );
     }
 
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Atelier $atelier
-     * @return \Illuminate\Http\Response
+     * @param Atelier $atelier
+     * @return View
      */
     public function show( Atelier $atelier ): view {
-        return view( 'atelier', [ 'atelier' => $atelier ] );
+        return view( 'studio', [ 'atelier' => $atelier ] );
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param Atelier $atelier
+     * @return View
+     */
+    public function signUp( Atelier $atelier ): view {
+        return view( 'studio-sign-up', [ 'atelier' => $atelier ] );
     }
 }

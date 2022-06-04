@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get( '/', fn() => view( 'home' ) )->name( 'home' );
 Route::get( 'about', fn() => view( 'about' ) )->name( 'about' );
-Route::get( 'atelier-spaces', [ AtelierController::class, 'index' ] )->name( 'atelier-spaces' );
-Route::get( 'atelier-spaces/share-your-atelier', fn() => view( 'share-your-atelier' ) )->name( 'share-your-atelier' );
-Route::get( 'atelier-spaces/atelier/{atelier}', [ AtelierController::class, 'show' ] )->name( 'atelier' );
+Route::get( 'find-a-studio', [ AtelierController::class, 'index' ] )->name( 'find-a-studio' );
+Route::get( 'share-a-studio', fn() => view( 'share-a-studio' ) )->name( 'share-a-studio' );
+Route::get( 'studio/{atelier}/sign-up', [ AtelierController::class, 'signUp' ])->name( 'studio-sign-up' );
+Route::get( 'studio/{atelier}', [ AtelierController::class, 'show' ] )->name( 'atelier' );
 Route::get( 'stammtisch', fn() => view( 'stammtisch' ) )->name( 'stammtisch' );
 Route::get( 'projects', fn() => view( 'projects' ) )->name( 'projects' );
 Route::get( 'collective', fn() => view( 'collective' ) )->name( 'collective' );
