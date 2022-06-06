@@ -6,25 +6,39 @@
         <div class="my-6"></div>
 
         <article class="prose prose-md lg:prose-xl">
-            <h1>{{$atelier->name}}</h1>
-            <p>
+            <h1 class="font-Ogg font-bold">{{$atelier->name}}</h1>
+            <p class="font-Helvetica font-light leading-6">
                 Information to the individual studio spaces.
+                <br>
                 Description (Infrastructure, social structure, shared studio, how many people etc.)
-                Coordinates, 1 picture,
             </p>
         </article>
 
-        <x-heart-icon class="my-6"/>
+        <x-heart-icon class="my-10"/>
 
-        <image class="w-96" src="{{url('/images/atelier.jpeg')}}"/>
+        <image class="w-2/3" src="{{url('/images/studios/atelier.jpeg')}}"/>
 
+        <div class="my-10"></div>
+
+        <h2 class="font-Ogg font-bold text-4xl">Available Slots:</h2>
+
+        <div class="my-2"></div>
+
+        <iframe
+            class="w-full"
+            src="https://calendar.google.com/calendar/embed?src=db7vpc6g8glnec5cp02am40omc%40group.calendar.google.com&ctz=Europe%2FZurich"
+            style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+        </iframe>
+
+        <div class="my-2 lg:my-6"></div>
 
         <h1 class="mt-8"></h1>
         <a href="{{route('studio-sign-up', $atelier->id )}}">
             <button
                 type="button"
                 class="items-center border border-gray-300 shadow-sm text-xl
-                    font-medium rounded text-gray-700 bg-[#EDEDED] hover:bg-blue-50
+                    font-Ogg italic leading-8
+                    font-medium rounded text-black bg-[#EDEDED] hover:bg-blue-50
                     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-44 h-10 self-center"
             >
                 Sign Up

@@ -23,42 +23,58 @@
 
     <div class="my-6"></div>
 
+    @php
+        $tables = [
+            (object)[
+				'image' => '/images/icons/big-heart.svg',
+				'date' => 'June 20th 18:00',
+				'title' => 'Viaduktraum Toni-Areal',
+				'street' => 'Pfingstweidstrasse 96',
+				'postal' => '8005 Zürich',
+           ],
+        ];
+    @endphp
+
     <section class="flex flex-col justify-center content-center justify-items-center items-center mb-16 w-5/6 mx-auto">
         <h2 class="text-5xl mb-4 font-Ogg font-bold">Next Stammtisch:</h2>
         <ul
             role="list"
             class="flex flex-col scroll-smooth overflow-y-auto divide-y divide-gray-400 border-y border-gray-300 w-full"
         >
-            @for ($i = 0; $i < 1; $i++)
+            @foreach ($tables as $table)
                 <li class="py-10 flex flex-col justify-between space-y-4">
-                    <div class="flex justify-center rounded-full self-center">
-                        <img class="rounded-full w-96 h-96 self-center m-0"
-                             src="{{url('/images/stammtisch.png')}}"
-                             alt="">
+                    <div class="flex justify-center rounded-full self-center border border-[#4FBCEC]">
+                        <img class="rounded-full w-80 h-80 md:w-96 md:h-96 self-center m-0"
+                             src="{{url($table->image)}}"
+                             alt="{{$table->title}} . image">
                     </div>
                     <div class="flex flex-col justify-center justify-items-center items-center">
-                        <h4 class="text-3xl text-black font-Ogg font-bold my-4">June 20th 18:00</h4>
-                        <h3 class="text-5xl text-black font-Ogg font-bold italic my-3">Viaduktraum Toni-Areal</h3>
+                        <h4 class="text-3xl text-black font-Ogg font-bold my-4">{{$table->date}}</h4>
+                        <h3 class="text-5xl text-black font-Ogg font-bold italic my-3">{{$table->title}}</h3>
                         <p class="text-3xl text-black font-Helvetica font-light italic mt-4">
-                            Pfingstweidstrasse 96<br>
-                            8005 Zürich
+                            {{$table->street}}<br>
+                            {{$table->postal}}
                         </p>
                     </div>
                 </li>
-            @endfor
+            @endforeach
         </ul>
     </section>
 
     <section class="flex flex-col justify-center items-center mx-auto">
         <h2 class="text-5xl text-black font-Ogg font-bold mb-8">Want to join?</h2>
-        <button
-            type="button"
-            class="items-center font-Ogg italic border border-[#E8E8E8] shadow-sm text-xl
+
+        <a href = "mailto:5m2collective@gmail.com?subject=Stammtisch">
+            <button
+                type="button"
+                class="items-center font-Ogg italic border border-[#E8E8E8] shadow-sm text-xl
                     font-medium text-black bg-[#EDEDED] hover:bg-blue-50
                     focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-56 h-16 self-center"
-        >
-            Write us!
-        </button>
+            >
+                Write us!
+            </button>
+        </a>
+
     </section>
 
     <div class="self-center my-12"></div>

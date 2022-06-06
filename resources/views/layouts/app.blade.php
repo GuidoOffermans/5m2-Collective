@@ -16,14 +16,14 @@
 
 <header class="" x-data="{ open: false } ">
     <div class="flex justify-center">
-        <x-application-logo/>
+        <x-application-logo class="h-24 lg:h-full"/>
     </div>
 
     <nav class="bg-white tracking-wider">
         <div class=" mx-auto">
             <div class="flex justify-between border-y border-gray-400 h-16">
                 <div class="flex mx-auto">
-                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8 font-Ogg font-bold">
+                    <div class="hidden sm:ml-6 md:flex sm:space-x-8 font-Ogg font-bold">
                         <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
                             {{ __('Home') }}
                         </x-nav-link>
@@ -51,7 +51,7 @@
                     </div>
                 </div>
 
-                <div class="-mr-2 flex items-center sm:hidden px-4 md:px-0">
+                <div class="-mr-2 flex items-center md:hidden px-4 md:px-0">
 
                     <button type="button"
                             id="menu-button"
@@ -83,7 +83,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div x-show="open" x-transition class="sm:hidden" id="mobile-menu">
+        <div x-show="open" x-transition class="md:hidden" id="mobile-menu">
 
             <div class="pt-2 pb-3 space-y-1">
                 <x-mobile-nav-link :href="route('home')" :active="request()->routeIs('home')">
@@ -120,10 +120,11 @@
     @yield('content')
 </main>
 
-<footer class="flex flex-col justify-center justify-items-center items-center border-t border-gray-300 tracking-wider">
-    <div class="flex w-3/4 my-6">
-        <nav class="flex flex-row text-xl w-1/3 justify-between">
-            <div class="flex flex-col space-y-2">
+<footer class="flex flex-col border-t border-gray-300 tracking-wider text-black">
+    <div class="flex px-3 sm:px-4 my-4">
+
+        <nav class="flex flex-row text-xl lg:w-1/3 justify-between">
+            <div class="flex flex-col space-y-2 text-base font-Ogg ">
                 <a href="{{route('home')}}">
                     {{ __('Home') }}
                 </a>
@@ -148,21 +149,26 @@
                 <a href="{{route('contact')}}">
                     {{ __('Contact') }}
                 </a>
-            </div>
-            <div class="flex flex-col w-1/2 space-y-2">
-                <p>Follow us!</p>
-                <a href="https://instagram.com/5m2collective">
-                    <img src="{{url('/images/instagram.png')}}" alt="instagram link" class="h-8"/>
+                <a href="https://instagram.com/5m2collective" class="md:hidden">
+                    Instagram
                 </a>
             </div>
+
+            <div class="hidden md:flex flex-col w-1/2 space-y-2 text-base font-Ogg">
+                <p>Follow us!</p>
+                <a href="https://instagram.com/5m2collective" class="hover:drop-shadow-lg">
+                    <img src="{{url('/images/icons/instagram-icon.png')}}" alt="instagram link" class="h-8"/>
+                </a>
+            </div>
+
         </nav>
         <div class="w-2/3 h-20 ">
-            <x-application-logo class="max-w-xl h-24"/>
+{{--            <x-application-logo class="max-w-xl h-24"/>--}}
         </div>
     </div>
 
-    <div class="flex border-t border-gray-300 justify-center align-middle w-full">
-        <p>© 2022 5m2 Collective. All Rights reserved. * Privacy Policy</p>
+    <div class="flex border-t border-gray-300 justify-center align-middle w-full font-Ogg font-light text-sm py-2 lg:py-4">
+        <p>© 2022 5m2 Collective. All Rights reserved. <br class="lg:hidden">* Privacy Policy</p>
     </div>
 </footer>
 </body>

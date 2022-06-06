@@ -19,29 +19,30 @@
             </p>
         </article>
 
+        <div class="my-6"></div>
         <x-heart-icon class="my-6"/>
 
-        <article class="prose prose-md lg:prose-xl ">
+        <article class="prose prose-md lg:prose-xl">
             <h2 class="font-Ogg font-bold">Our Vision</h2>
-            <ul class="list-inside font-Helvetica font-light leading-6">
+            <ul class="font-Helvetica font-light leading-6 text-left">
                 <li>Create a collective support structure for and of creative people</li>
                 <li>Negotiate and democratize access to art and design spaces and projects</li>
             </ul>
 
         </article>
-
+        <div class="my-6"></div>
         <x-heart-icon class="my-6"/>
 
         <article class="prose prose-md lg:prose-xl">
             <h2 class="font-Ogg font-bold">Our Approach</h2>
-            <ul class="list-inside font-Helvetica font-light leading-6">
+            <ul class="font-Helvetica font-light leading-6 text-left">
                 <li>Build bridges between existing networks</li>
                 <li>Collect unused spaces on the platform and make them accessible</li>
                 <li>Facilitate possibilities to work on projects as a collective</li>
             </ul>
 
         </article>
-
+        <div class="my-6"></div>
         <x-heart-icon class="my-6"/>
 
         <article class="prose prose-md lg:prose-xl">
@@ -59,19 +60,19 @@
                 knowledge to these places.
             </p>
         </article>
-
+        <div class="my-6"></div>
         <x-heart-icon class=" my-6"/>
 
-        <div class="my-72"></div>
+        <div class="my-28"></div>
 
         <article class="prose prose-md lg:prose-xl">
             <h2 class="font-Ogg font-bold">Credits</h2>
             <p class="font-Helvetica font-light leading-6">
-                <b class="bold">Concept and design:</b> 5m2 Collective<br>
-                <b>Logo and initial visual identity:</b> Lucy Fabian & Nicole Hirschi<br>
-                <b>Typefaces:</b> Ogg by Sharp Type<br>
-                <b>Website design:</b> Nicole Hirschi<br>
-                <b>Website development:</b> Guido Offermans</p>
+                <b class="font-bold">Concept and design:</b> 5m2 Collective<br>
+                <b class="font-bold">Logo and initial visual identity:</b> Lucy Fabian & Nicole Hirschi<br>
+                <b class="font-bold">Typefaces:</b> Ogg by Sharp Type<br>
+                <b class="font-bold">Website design:</b> Nicole Hirschi<br>
+                <b class="font-bold">Website development:</b> Guido Offermans</p>
         </article>
 
         <div class="my-36"></div>
