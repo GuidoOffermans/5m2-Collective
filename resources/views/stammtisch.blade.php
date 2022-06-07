@@ -18,7 +18,7 @@
             </p>
         </article>
 
-        <x-heart-icon class="my-6"/>
+       <x-heart-icon class="w-12 my-6"/>
     </section>
 
     <div class="my-6"></div>
@@ -26,7 +26,7 @@
     @php
         $tables = [
             (object)[
-				'image' => '/images/icons/big-heart.svg',
+				'image' => '/images/icons/big-heart-xl.jpg',
 				'date' => 'June 20th 18:00',
 				'title' => 'Viaduktraum Toni-Areal',
 				'street' => 'Pfingstweidstrasse 96',
@@ -43,15 +43,15 @@
         >
             @foreach ($tables as $table)
                 <li class="py-10 flex flex-col justify-between space-y-4">
-                    <div class="flex justify-center rounded-full self-center border border-[#4FBCEC]">
-                        <img class="rounded-full w-80 h-80 md:w-96 md:h-96 self-center m-0"
+                    <div class="flex justify-center self-center ">
+                        <img class="rounded-full w-80 h-80 md:w-96 md:h-96 self-center m-0 object-contain border border-[#4FBCEC] object-center"
                              src="{{url($table->image)}}"
                              alt="{{$table->title}} . image">
                     </div>
                     <div class="flex flex-col justify-center justify-items-center items-center">
                         <h4 class="text-3xl text-black font-Ogg font-bold my-4">{{$table->date}}</h4>
                         <h3 class="text-5xl text-black font-Ogg font-bold italic my-3">{{$table->title}}</h3>
-                        <p class="text-3xl text-black font-Helvetica font-light italic mt-4">
+                        <p class="text-3xl text-black font-Helvetica font-light italic mt-4 text-center">
                             {{$table->street}}<br>
                             {{$table->postal}}
                         </p>
@@ -64,15 +64,10 @@
     <section class="flex flex-col justify-center items-center mx-auto">
         <h2 class="text-5xl text-black font-Ogg font-bold mb-8">Want to join?</h2>
 
-        <a href = "mailto:5m2collective@gmail.com?subject=Stammtisch">
-            <button
-                type="button"
-                class="items-center font-Ogg italic border border-[#E8E8E8] shadow-sm text-xl
-                    font-medium text-black bg-[#EDEDED] hover:bg-blue-50
-                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-56 h-16 self-center"
-            >
+        <a href="mailto:5m2collective@gmail.com?subject=Stammtisch">
+            <x-general-button>
                 Write us!
-            </button>
+            </x-general-button>
         </a>
 
     </section>

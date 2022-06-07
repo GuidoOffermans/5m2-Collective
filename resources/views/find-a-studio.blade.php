@@ -15,7 +15,7 @@
             </p>
         </article>
 
-        <x-heart-icon class="my-6"/>
+       <x-heart-icon class="w-12 my-6"/>
 
     </section>
 
@@ -58,7 +58,7 @@
                                                     {{$atelier->address}}<br>
                                                     {{$atelier->postalCode}} {{$atelier->city}}</p>
                                             </div>
-                                            <div class="hidden lg:flex justify-items-start content-center items-center">
+                                            <div class="hidden lg:flex justify-items-start content-center items-center pt-4">
                                                 <x-heart-icon class="h-9 w-9 bg-[#E3F5FF] rounded-full"></x-heart-icon>
                                                 <p class="text-lg md:text-xl font-bold font-Ogg text-black ml-4">
                                                     By 5m2 Collective
@@ -72,11 +72,6 @@
                                             alt="">
 
                                     </div>
-                                    <div class="hidden lg:flex justify-center align-middle w-1/2">
-                                        <x-arrow class="my-auto"/>
-                                    </div>
-
-
                                 </div>
                             </a>
                         </li>

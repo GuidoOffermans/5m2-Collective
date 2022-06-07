@@ -70,7 +70,7 @@
                             </div>
 
                             <div class="flex h-full">
-                                <x-heart-icon class="h-6 w-6  lg:h-9 lg:w-9 bg-[#E3F5FF] rounded-full self-end"></x-heart-icon>
+                                <x-heart-icon class="h-6 w-6 lg:h-9 lg:w-9 bg-[#E3F5FF] rounded-full self-end"></x-heart-icon>
                                 <p class="text-base lg:text-xl font-bold text-black font-Ogg ml-4 self-end">
                                     {{ $project->address }}
                                 </p>

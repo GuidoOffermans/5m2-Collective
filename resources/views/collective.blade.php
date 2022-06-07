@@ -9,7 +9,7 @@
             <h1 class="font-Ogg font-bold">Collective</h1>
         </article>
 
-        <x-heart-icon class="my-6"/>
+       <x-heart-icon class="w-12 my-6"/>
     </section>
 
     <div class="my-6"></div>
@@ -53,8 +53,8 @@
 				'joinedDate' => 'Joined 2022',
 				'name' => 'Gökhan Avci',
 				'pronouns' => '(He/Him)',
-				'role' => '--',
-				'country' => 'Switzerland'
+				'role' => '',
+				'country' => 'Turkey'
     ],
 
 ];
@@ -66,19 +66,19 @@
 
             @foreach ($persons as $person)
                 <li class="col-span-1 flex flex-col text-center bg-white border-b">
-                    <div class="flex-1 flex flex-col p-1 pb-8">
+                    <div class="flex-1 flex flex-col p-1 pb-8 space-y-6">
                         @if ($person->image)
                             <img
-                                class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mx-auto rounded-full"
+                                class="w-48 h-48 md:w-52 md:h-52 flex-shrink-0 mx-auto rounded-full"
                                 src="{{url( $person->image )}}"
                                 alt=""
                             >
                         @else
-                            <div class="w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mx-auto rounded-full bg-[#E3F5FF]"></div>
+                            <div class="w-48 h-48 md:w-52 md:h-52 flex-shrink-0 mx-auto rounded-full bg-[#E3F5FF]"></div>
                         @endif
 
                         <p class="text-lg font-Ogg mt-5">{{ $person->joinedDate }}</p>
-                        <h3 class="mt-2 text-5xl text-black font-Ogg font-bold italic">{{ $person->name }}</h3>
+                        <h3 class="mt-2 text-[2.7em] text-black font-Ogg font-bold italic">{{ $person->name }}</h3>
                         <p class="text-lg font-Helvetica font-light mt-3">
                             {{ $person->pronouns }} {{ $person->role }}
                             <br>

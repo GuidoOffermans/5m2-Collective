@@ -12,18 +12,13 @@
             </a>
         </article>
 
-        <x-heart-icon class="my-6"/>
+       <x-heart-icon class="w-12 my-6"/>
 
         <article class="prose prose-md lg:prose-xl">
             <h2 class="font-Ogg font-bold">Join the Conversation!</h2>
-            <button
-                type="button"
-                class="items-center border border-gray-300 shadow-sm text-xl
-                    font-medium text-gray-700 bg-[#EDEDED] hover:bg-blue-50
-                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-44 h-10 self-center font-Ogg italic underline"
-            >
-                Etherpad
-            </button>
+            <x-general-button>
+                <span class="underline">Etherpad</span>
+            </x-general-button>
         </article>
 
         <div class="my-6"></div>

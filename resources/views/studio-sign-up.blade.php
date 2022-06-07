@@ -30,7 +30,7 @@
                         We will get in touch with you to discuss the further steps as soon as everything is coordinated
                         :)
                     </p>
-                    <x-heart-icon class="my-6"/>
+                   <x-heart-icon class="w-12 my-6"/>
                 </div>
                 <div class="my-32"></div>
             </div>

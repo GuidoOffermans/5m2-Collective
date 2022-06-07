@@ -34,15 +34,9 @@
 
         <h1 class="mt-8"></h1>
         <a href="{{route('studio-sign-up', $atelier->id )}}">
-            <button
-                type="button"
-                class="items-center border border-gray-300 shadow-sm text-xl
-                    font-Ogg italic leading-8
-                    font-medium rounded text-black bg-[#EDEDED] hover:bg-blue-50
-                    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 w-44 h-10 self-center"
-            >
+            <x-general-button>
                 Sign Up
-            </button>
+            </x-general-button>
         </a>
     </section>
 

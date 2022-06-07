@@ -12,46 +12,44 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 </head>
-<body class="flex flex-col font-sans antialiased h-screen">
+<body class="flex flex-col font-sans antialiased overflow-x-hidden">
 
-<header class="" x-data="{ open: false } ">
-    <div class="flex justify-center">
-        <x-application-logo class="h-24 lg:h-full"/>
+<header class="md:sticky top-0 z-40 w-full" x-data="{ open: false } ">
+    <div class="flex justify-center bg-white">
+        <x-application-logo />
     </div>
 
     <nav class="bg-white tracking-wider">
         <div class=" mx-auto">
-            <div class="flex justify-between border-y border-gray-400 h-16">
-                <div class="flex mx-auto">
-                    <div class="hidden sm:ml-6 md:flex sm:space-x-8 font-Ogg font-bold">
-                        <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
-                            {{ __('Home') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('find-a-studio')" :active="request()->routeIs('find-a-studio')">
-                            {{ __('Find a Studio') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('share-a-studio')" :active="request()->routeIs('share-a-studio')">
-                            {{ __('Share a Studio') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('stammtisch')" :active="request()->routeIs('stammtisch')">
-                            {{ __('Stammtisch') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
-                            {{ __('Projects') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('collective')" :active="request()->routeIs('collective')">
-                            {{ __('Collective') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
-                            {{ __('About') }}
-                        </x-nav-link>
-                        <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
-                            {{ __('Contact') }}
-                        </x-nav-link>
-                    </div>
+            <div class="flex justify-between justify-items-center border-y border-gray-400 h-16">
+                <div class="hidden md:flex w-3/4 md:justify-between font-Ogg font-bold mx-auto">
+                    <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('find-a-studio')" :active="request()->routeIs('find-a-studio')">
+                        {{ __('Find a Studio') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('share-a-studio')" :active="request()->routeIs('share-a-studio')">
+                        {{ __('Share a Studio') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('stammtisch')" :active="request()->routeIs('stammtisch')">
+                        {{ __('Stammtisch') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('projects')" :active="request()->routeIs('projects')">
+                        {{ __('Projects') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('collective')" :active="request()->routeIs('collective')">
+                        {{ __('Collective') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
+                        {{ __('About') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        {{ __('Contact') }}
+                    </x-nav-link>
                 </div>
 
-                <div class="-mr-2 flex items-center md:hidden px-4 md:px-0">
+                <div class="-mr-2 flex items-center md:hidden px-4 md:px-0 ml-auto">
 
                     <button type="button"
                             id="menu-button"
@@ -120,8 +118,8 @@
     @yield('content')
 </main>
 
-<footer class="flex flex-col border-t border-gray-300 tracking-wider text-black">
-    <div class="flex px-3 sm:px-4 my-4">
+<footer class="flex flex-col border-t border-gray-300 tracking-wider text-black z-40 bg-white">
+    <div class="flex px-3 sm:px-4 my-4 lg:w-3/4 lg:mx-auto">
 
         <nav class="flex flex-row text-xl lg:w-1/3 justify-between">
             <div class="flex flex-col space-y-2 text-base font-Ogg ">
@@ -163,11 +161,11 @@
 
         </nav>
         <div class="w-2/3 h-20 ">
-{{--            <x-application-logo class="max-w-xl h-24"/>--}}
         </div>
     </div>
 
-    <div class="flex border-t border-gray-300 justify-center align-middle w-full font-Ogg font-light text-sm py-2 lg:py-4">
+    <div
+        class="flex border-t border-gray-300 justify-center align-middle w-full font-Ogg font-light text-sm py-2 lg:py-4">
         <p>© 2022 5m2 Collective. All Rights reserved. <br class="lg:hidden">* Privacy Policy</p>
     </div>
 </footer>
