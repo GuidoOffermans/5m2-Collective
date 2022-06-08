@@ -1204,6 +1204,9 @@ h3 {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.mr-auto {
+  margin-right: auto;
+}
 .block {
   display: block;
 }
@@ -1605,6 +1608,9 @@ h3 {
 .justify-self-end {
   justify-self: end;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1616,6 +1622,12 @@ h3 {
 }
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+.overflow-x-scroll {
+  overflow-x: scroll;
+}
+.overflow-y-scroll {
+  overflow-y: scroll;
 }
 .scroll-smooth {
   scroll-behavior: smooth;
@@ -1890,6 +1902,10 @@ h3 {
   padding-top: 0px;
   padding-bottom: 0px;
 }
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
 .pt-5 {
   padding-top: 1.25rem;
 }
@@ -2004,9 +2020,23 @@ h3 {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
+.text-\[80px\] {
+  font-size: 80px;
+}
+.text-\[70px\] {
+  font-size: 70px;
+}
+.text-\[50px\] {
+  font-size: 50px;
+}
+.text-\[55px\] {
+  font-size: 55px;
+}
+.text-\[65px\] {
+  font-size: 65px;
+}
+.text-\[45px\] {
+  font-size: 45px;
 }
 .font-medium {
   font-weight: 500;
@@ -2397,6 +2427,10 @@ h3 {
 .focus\:ring-indigo-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
+}
+.focus\:ring-blue-100:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(219 234 254 / var(--tw-ring-opacity));
 }
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
@@ -3121,6 +3155,10 @@ h3 {
     margin-right: 2.5rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3159,6 +3197,10 @@ h3 {
 
   .lg\:w-9 {
     width: 2.25rem;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
   }
 
   .lg\:max-w-5xl {
@@ -3244,6 +3286,10 @@ h3 {
   }
 }
 @media (min-width: 1280px) {
+
+  .xl\:flex {
+    display: flex;
+  }
 
   .xl\:h-56 {
     height: 14rem;

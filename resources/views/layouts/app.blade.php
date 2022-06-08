@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="overflow-x-hidden" >
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
 </head>
-<body class="flex flex-col font-sans antialiased overflow-x-hidden">
+<body class="flex flex-col font-sans antialiased">
 
 <header class="md:sticky top-0 z-40 w-full" x-data="{ open: false } ">
     <div class="flex justify-center bg-white">
@@ -20,7 +20,7 @@
     </div>
 
     <nav class="bg-white tracking-wider">
-        <div class=" mx-auto">
+        <div class="mx-auto">
             <div class="flex justify-between justify-items-center border-y border-gray-400 h-16">
                 <div class="hidden md:flex w-3/4 md:justify-between font-Ogg font-bold mx-auto">
                     <x-nav-link :href="route('home')" :active="request()->routeIs('home')">
@@ -50,17 +50,22 @@
                 </div>
 
                 <div class="-mr-2 flex items-center md:hidden px-4 md:px-0 ml-auto">
-
+                    <img
+                        src="{{asset('/images//icons/logo.jpg')}}"
+                        class="md:hidden flex w-2/3 py-8 mr-auto"
+                     alt=""
+                    >
                     <button type="button"
                             id="menu-button"
-                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400
+                            hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-100"
                             aria-controls="mobile-menu"
                             aria-expanded="false"
                             @click="open = ! open"
                     >
                         <span class="sr-only">Open main menu</span>
 
-                        <svg class="block h-6 w-6"
+                        <svg class="block h-9 w-9"
                              id="menu-icon-y"
                              x-show="!open"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -68,7 +73,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
                         </svg>
 
-                        <svg class="block h-6 w-6"
+                        <svg class="block h-9 w-9"
                              id="menu-icon-x"
                              x-show="open"
                              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
