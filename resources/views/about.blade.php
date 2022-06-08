@@ -61,7 +61,7 @@
             </p>
         </article>
         <div class="my-6"></div>
-        <x-heart-icon class=" my-6"/>
+        <x-heart-icon class="w-12 my-6"/>
 
         <div class="my-28"></div>
 

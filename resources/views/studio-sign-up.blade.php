@@ -12,7 +12,7 @@
             </p>
         </article>
 
-        <x-heart-icon class="self-center my-6"/>
+        <x-heart-icon class="w-12 my-6"/>
 
     </section>
 
@@ -140,6 +140,7 @@
                             <div class="sm:col-span-6">
                                 <label for="skills" class="flex flex-col text-xl font-medium text-black">
                                     What skills do you have and what is your preferred medium?
+                                    <span class="text-base">Please provide a link to some of your work if you can.</span>
                                     @error('skills')
                                     <span class="text-red-600 text-sm"
                                           x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>

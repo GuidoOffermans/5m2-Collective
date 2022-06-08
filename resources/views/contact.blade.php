@@ -16,9 +16,11 @@
 
         <article class="prose prose-md lg:prose-xl">
             <h2 class="font-Ogg font-bold">Join the Conversation!</h2>
-            <x-general-button>
-                <span class="underline">Etherpad</span>
-            </x-general-button>
+            <a href="https://yopad.eu/p/5m2_Collective-365days" target="_blank">
+                <x-general-button>
+                    <span class="underline">Etherpad</span>
+                </x-general-button>
+            </a>
         </article>
 
         <div class="my-6"></div>

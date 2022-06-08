@@ -14,7 +14,7 @@
             </p>
         </article>
 
-        <x-heart-icon class="my-10"/>
+        <x-heart-icon class="w-12 my-10"/>
 
         <image class="w-2/3" src="{{url('/images/studios/atelier.jpeg')}}"/>
 

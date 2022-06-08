@@ -22,7 +22,7 @@
 
         </article>
 
-        <x-heart-icon class="self-center my-6"/>
+        <x-heart-icon class="w-12 my-6"/>
 
     </section>
 

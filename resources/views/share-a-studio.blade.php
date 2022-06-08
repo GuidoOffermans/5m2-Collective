@@ -20,14 +20,14 @@
             </p>
         </article>
 
-       <x-heart-icon class="w-12 my-6"/>
+        <x-heart-icon class="w-12 my-6"/>
 
     </section>
 
     <div class="my-6"></div>
 
     <section class="flex flex-col font-Ogg">
-{{--                @if( true )--}}
+        {{--                @if( true )--}}
         @if( session()->has('filledForm') )
             <div class="border border-[#C4C4C4] mx-2 lg:mx-20" x-init="$el.scrollIntoView()">
                 <div class="my-32"></div>
@@ -38,7 +38,7 @@
                         We will get in touch with you to discuss the further steps as soon as everything is coordinated
                         :)
                     </p>
-                   <x-heart-icon class="w-12 my-6"/>
+                    <x-heart-icon class="w-12 my-6"/>
                 </div>
                 <div class="my-32"></div>
             </div>
@@ -60,7 +60,8 @@
                                 <label for="name" class="flex flex-col text-xl font-medium text-black">
                                     Your Name
                                     @error('name')
-                                    <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -78,7 +79,8 @@
                                 <label for="email" class="flex flex-col text-xl font-medium text-black">
                                     Your Email
                                     @error('email')
-                                    <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -113,13 +115,31 @@
                                 </div>
                             </div>
 
-                            <div class="sm:col-span-3"></div>
+                            <div class="sm:col-span-3">
+                                <label for="language" class="flex flex-col text-xl font-medium text-black">
+                                    Preferred language
+                                    @error('language')
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    @enderror
+                                </label>
+                                <div class="mt-1">
+                                    <input type="text"
+                                           name="language"
+                                           id="language"
+                                           autocomplete="language"
+                                           placeholder="German"
+                                           value="{{old('language')}}"
+                                           class="font-Helvetica shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-[#C4C4C4] @error('language') is-invalid @enderror">
+                                </div>
+                            </div>
 
                             <div class="sm:col-span-3">
                                 <label for="studio-name" class="flex flex-col text-xl font-medium text-black">
                                     Name of the Studio
                                     @error('studio-name')
-                                    <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -138,7 +158,8 @@
                                 <label for="studio-address" class="flex flex-col text-xl font-medium text-black">
                                     Address of the Studio
                                     @error('studio-address')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -155,9 +176,11 @@
 
                             <div class="sm:col-span-6">
                                 <label for="studio-about" class="flex flex-col text-xl font-medium text-black">
-                                    Is it a shared space? If yes, how many other people are using the space?
+                                    Is it a shared space?
+                                    If yes, how many other people are using the space?
                                     @error('studio-about')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -172,10 +195,10 @@
 
                             <div class="sm:col-span-6">
                                 <label for="studio-extra" class="flex flex-col text-xl font-medium text-black">
-                                    What infrastructure is there? (Kitchen, toilet, table etc.)
-                                    Are there things others can use? Or things that are completely off-limits?
+                                    What skills do the other people in the studio have or what medium do they work with?
                                     @error('studio-extra')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -189,10 +212,30 @@
                             </div>
 
                             <div class="sm:col-span-6">
+                                <label for="studio-infra" class="flex flex-col text-xl font-medium text-black">
+                                    What infrastructure is there? (beside the basic needs, like machines, tools etc.)
+                                    Are there things for collective usage? Or things that are completely off-limits?
+                                    @error('studio-infra')
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    @enderror
+                                </label>
+                                <div class="mt-1">
+                                <textarea
+                                    id="studio-infra"
+                                    name="studio-infra"
+                                    rows="3"
+                                    class="font-Helvetica shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border border-[#C4C4C4] @error('studio-infra') is-invalid @enderror"
+                                >{{old('studio-infra')}}</textarea>
+                                </div>
+                            </div>
+
+                            <div class="sm:col-span-6">
                                 <label for="studio-key" class="flex flex-col text-xl font-medium text-black">
                                     Key exchange/ Accessibility: How can we enter the space?
                                     @error('studio-key')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -215,7 +258,8 @@
                                 <label for="contact-name" class="flex flex-col text-xl font-medium text-black">
                                     Contact Name
                                     @error('contact-name')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
+                                    <span class="text-red-600 text-sm"
+                                          x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
                                     @enderror
                                 </label>
                                 <div class="mt-1">
@@ -230,34 +274,17 @@
                             </div>
 
                             <div class="sm:col-span-3">
-                                <label for="contact-email" class="flex flex-col text-xl font-medium text-black">
-                                    Contact Email
-                                    @error('contact-email')
-                                      <span class="text-red-600 text-sm" x-init="$el.scrollIntoView({block: 'center'})">{{ $message }}</span>
-                                    @enderror
-                                </label>
-                                <div class="mt-1">
-                                    <input type="email"
-                                           name="contact-email"
-                                           id="contact-email"
-                                           autocomplete="contact-email"
-                                           placeholder="contact@atelier.ch"
-                                           value="{{old('contact-email')}}"
-                                           class="font-Helvetica shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-[#C4C4C4] @error('contact-email') is-invalid @enderror">
-                                </div>
-                            </div>
-
-                            <div class="sm:col-span-3">
                                 <div class="flex justify-between">
-                                    <label for="contact-phone-number"
+                                    <label for="contact-phone"
                                            class="flex justify-items-center text-xl font-medium text-black w-full">
                                         Contact Phone Number
-                                        @error('contact-phone-number')
+                                        @error('contact-phone')
                                         <span
-                                            class="inline-flex text-red-600 text-sm ml-auto mr-2">{{ $message }}</span>
+                                            class="inline-flex text-red-600 text-sm ml-auto mr-2"
+                                            x-init="$el.scrollIntoView({block: 'center'})"
+                                        >{{ $message }}</span>
                                         @enderror
                                     </label>
-                                    <span class="text-sm text-black" id="contact-phone-number-optional">Optional</span>
                                 </div>
                                 <div class="mt-1">
                                     <input type="text"
@@ -266,7 +293,7 @@
                                            class="font-Helvetica shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-[#C4C4C4] @error('contact-phone') is-invalid @enderror"
                                            placeholder="+41 76 555 98 88"
                                            value="{{old('contact-phone')}}"
-                                           aria-describedby="contact-phone-optional">
+                                    >
                                 </div>
                             </div>
 

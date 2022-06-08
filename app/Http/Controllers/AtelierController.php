@@ -75,14 +75,15 @@ class AtelierController extends Controller {
                 $request->input( 'name' ),
                 $request->input( 'email' ),
                 $request->input( 'phone' ) ? $request->input( 'phone' ) : '',
+                $request->input( 'language' ),
                 $request->input( 'studio-name' ),
                 $request->input( 'studio-address' ),
                 $request->input( 'studio-about' ),
                 $request->input( 'studio-extra' ),
+                $request->input( 'studio-infra' ),
                 $request->input( 'studio-key' ),
                 $request->input( 'contact-name' ),
-                $request->input( 'contact-email' ),
-                $request->input( 'contact-phone' ) ? $request->input( 'contact-phone' ) : '',
+                $request->input( 'contact-phone' ),
             )
         );
 

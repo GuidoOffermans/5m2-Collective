@@ -13,13 +13,14 @@ class ShareAStudio extends Mailable implements ShouldQueue {
     public string $name;
     public string $email;
     public string $phone;
+    public string $language;
     public string $studioName;
     public string $studioAddress;
     public string $studioAbout;
     public string $studioExtra;
+    public string $studioInfra;
     public string $studioKey;
     public string $contactName;
-    public string $contactEmail;
     public string $contactPhone;
 
 
@@ -27,25 +28,27 @@ class ShareAStudio extends Mailable implements ShouldQueue {
         string $name,
         string $email,
         string $phone,
+        string $language,
         string $studioName,
         string $studioAddress,
         string $studioAbout,
         string $studioExtra,
+        string $studioInfra,
         string $studioKey,
         string $contactName,
-        string $contactEmail,
         string $contactPhone
     ) {
         $this->name          = $name;
         $this->email         = $email;
         $this->phone         = $phone;
+        $this->language      = $language;
         $this->studioName    = $studioName;
         $this->studioAddress = $studioAddress;
         $this->studioAbout   = $studioAbout;
         $this->studioExtra   = $studioExtra;
+        $this->studioInfra   = $studioInfra;
         $this->studioKey     = $studioKey;
         $this->contactName   = $contactName;
-        $this->contactEmail  = $contactEmail;
         $this->contactPhone  = $contactPhone;
     }
 
@@ -56,7 +59,7 @@ class ShareAStudio extends Mailable implements ShouldQueue {
      * @return $this
      */
     public function build() {
-        return $this->subject( $this->name . 'wants to share studio:' . $this->studioName )
+        return $this->subject( $this->name . ' wants to share studio: ' . $this->studioName )
             ->view( 'emails.shareAStudio' );
     }
 }
